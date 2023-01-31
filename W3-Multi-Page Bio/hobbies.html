@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tony Rodriguez" >
+    <meta name="description" content="Tony Rodriguez & About Me" >
+    
+    <title>W3 Multi-Page Bio</title>
+
+    <!--in-document styling; loads in head so styles apply as content loads-->
+    <style>
+
+        /*in here we must write in CSS*/
+
+        /*SELECTING in CSS & Javascript: select specific element(s) on a page
+                *by ELEMENT type        ex: body, div, p
+                *by ID attribute        ex: #wrapper, #nav, #footer, #title
+                *by CLASS attribute     ex: coming in week 3 :]
+
+        */
+
+        div { /*applies to ALL divs in the page*/
+
+            border:1px solid black;
+            padding:10px; /*adds 10px of space to all 4 sides inbetween content & border*/
+            margin:5px;/*adds 5px of space between elements (space added outside of border)*/
+
+        }
+
+        #wrapper {/*# specifies ID name, only applies to single element with that ID */
+            background-color:white;
+
+        }
+
+        #nav, #footer {/*can provide list or collection of elements to select*/
+
+            background-color:rgb(200, 200, 200);
+
+        }
+
+        a {/*styles all a (link) tags in page*/
+
+            text-decoration: none; /*removes the underline*/
+            font-size:20px;
+            margin-right:25px; /*adds 25 px of space to the right OF EACH link*/
+
+        }
+
+        /*4 default states --> :link, :hover, :active, :visited*/ 
+        a:hover {
+            color:rgb(212, 12, 12);
+        }
+
+        #footer {
+            font-size:10px;
+            text-align:center;
+        }
+
+    </style>
+
+</head>
+<body style="background-color:rgb(212, 12, 12);">
+    <div id="wrapper"><!--this div holds and "wraps around/together" all content on the page-->
+
+        <h1>Tony J. Rodriguez</h1>
+
+        <!--NAVIGATION----------------------------------->
+        <div id="nav">
+            <!--ID names can only be used 1x per page-->
+
+            <!--IN-PAGE links: linking to sections within the actual page itself (jumping to different sections)-->
+            <a href="#bio">BIO</a>
+            <a href="#school">SCHOOLING</a>
+            <a href="#hobbies">HOBBIES</a>
+            <a href="#footer">Bottom of Page</a>
+
+
+        </div><!--/ #nav-->
+
+        <!--BIO SECTION--------------------------------->
+        <div id="bio"> 
+        
+             <h2>About Me</h2>
+
+             <p>Tony Rodriguez is a Restaurant Manager and loving father of 3 children. </p>
+             <br>
+             <p>Father for 17 years, Managing restaurants for 15 plus years.</p>
+             <br>
+             <p>Specialized in meeting targeted company goals and being an awesome dad.</p>
+             <br>
+             <p>Enjoy's the thrill of the ride down the coast on his motorcycle.</p>
+             <br>
+             <p>Originally from Brooklyn, New York.   </p>
+
+        <div>
+
+           <!--REMOTE img link example-->
+            
+            <img src="images/Williamsburg in Brooklyn aka Dumbo.jpg" alt="Dumbo in New York City" style="width:500px;">
+            <h1>Dumbo in New York City</h1>
+
+            
+            
+        </div><!--/ #bio-->
+
+        <!--SCHOOLING SECTION-------------------------->
+        <div id="school"> 
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>Elementery, P.S 86 Liberty School</li>
+                <li>J.H.S, P.S 291 Roland Hayes</li>
+                <li>Bushwick High School</li>
+            </ol>
+
+
+
+            <img src="images/Bushwick High School.webp" alt="Bushwick High School in Brooklyn, NY" style="width:500px;">
+            <h1>Bushwick High School</h1>
+
+           
+        </div><!--/ #school-->
+
+        <!--HOBBIES SECTION---------------------------->
+        <div id="hobbies"> 
+
+            <h2>Hobbies</h2>
+
+            <ul>
+                <li>Cobbler, Crispin, Cordwainer, Soler or designing and making sneakers</li>
+                <li>3D Printing and designing jewelery through lost wax casting.</li>
+                <li>Video gaming, Console modding</li>
+            </ul>
+
+
+        </div><!--/ #hobbies-->
+
+        <!--FOOTER SECTION----------------------------->
+        <div id="footer" >
+            <a href="#wrapper">Back to Top of Page</a>
+            <p>&copy; 2023 | T Rodriguez | SE111.02 [2023]</p>
+
+
+        </div><!--/ #footer-->
+
+    </div><!--/ #wrapper-->     
+</body>
+</html>
+
+
+
+        
+       
+
+
