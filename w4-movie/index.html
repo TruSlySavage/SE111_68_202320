@@ -6,6 +6,48 @@
     <meta name="description" content="Week 4 Demo Movie Site">
     <meta name="author" content=" T Rodriguez">
     <title> &#127909;The Master Of Disguise </title>
+
+
+    <style>
+
+    div { /*applies to ALL divs in the page*/
+
+        border:2px solid black;
+        padding:10px; /*adds 10px of space to all 4 sides inbetween content & border*/
+        margin:5px;/*adds 5px of space between elements (space added outside of border)*/
+
+    }
+
+    #wrapper {
+        background-color:rgba(253, 253, 253, 0.616);
+
+    }
+
+    #nav, #footer {/*can provide list or collection of elements to select*/
+
+        background-color:rgba(255, 255, 255, 0.61);
+
+    }
+
+    a {/*styles all a (link) tags in page*/
+
+        text-decoration: none; /*removes the underline*/
+        font-size:20px;
+        margin-right:25px; /*adds 25 px of space to the right OF EACH link*/
+
+    }
+
+    /*4 default states --> :link, :hover, :active, :visited*/ 
+    a:hover {
+        color:rgb(255, 0, 0);
+    }
+
+    #footer {
+        font-size:10px;
+        text-align:center;
+    }
+
+    </style>
 </head>
 
 
@@ -16,7 +58,7 @@
     
 
         <!--HEADER AREA-->
-        <hr>
+        
 
         <div id="header" style="border:1px solid black; margin:10px; text-align:center;">
 
@@ -37,7 +79,7 @@
 
 
         <!--MAIN CONTENT-->
-        <hr>
+        
 
         <div id="content" style="border:1px solid black; margin:10px; width:900px; margin:auto; padding:15px;">
 
@@ -50,7 +92,7 @@
             </p>
 
             
-  <img src="images.html/The Master of Disguise Movie Poster.jpg" alt="The Master Of Disguise Movie Poster" style="width:500px;">
+            <img src="images.html/The Master of Disguise Movie Poster.jpg" alt="The Master Of Disguise Movie Poster" style="width:900px;">
             
 
             <ul>
@@ -68,18 +110,22 @@
 
 
         <!--FOOTER-->
-        <hr>
+        
 
         <div id="footer" style="border:1px solid black; margin:10px;">
 
-            <!--link back to the header-->
-            <a href="#header">Back to Top!</a>
 
-            <br>
-            <br>
-            <br>
-
+             <!--image of validation screenshot for THIS page-->
+             <img src="images.html/html index Validation.png" alt="Validation of about page" style="width:500px;">
             
+            <div id="footer" >
+                
+                 <!--link back to the header-->
+                <a href="#header">Back to Top!</a>
+                <p>&copy; 2023 | T Rodriguez | SE111.02</p>
+    
+    
+            </div><!--/ #footer-->
 
         </div><!--/ #footer-->
 
