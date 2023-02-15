@@ -15,57 +15,13 @@
 
     <style>
 
-        /*in here we must write in CSS*/
-
-        /*SELECTING in CSS & Javascript: select specific element(s) on a page
-                *by ELEMENT type        ex: body, div, p
-                *by ID attribute        ex: #wrapper, #nav, #footer, #title
-                *by CLASS attribute     ex: coming in week 3 :]
-
-        */
-
-        div { /*applies to ALL divs in the page*/
-
-            border:1px solid black;
-            padding:10px; /*adds 10px of space to all 4 sides inbetween content & border*/
-            margin:5px;/*adds 5px of space between elements (space added outside of border)*/
-
-        }
 
         #wrapper {/*# specifies ID name, only applies to single element with that ID */
-            background-color:rgb(218, 25, 25);
+            background-color:rgb(221, 192, 235);
 
         }
 
-        #nav, #footer {/*can provide list or collection of elements to select*/
-
-            background-color:rgb(200, 200, 200);
-
-        }
-
-        a {/*styles all a (link) tags in page*/
-
-            text-decoration: none; /*removes the underline*/
-            font-size:20px;
-            margin-right:25px; /*adds 25 px of space to the right OF EACH link*/
-
-        }
-
-        /*4 default states --> :link, :hover, :active, :visited*/ 
-        a:hover {
-            color:rgb(212, 12, 12);
-        }
-
-         #Link {
-            font: size 15px;
-            text-align:center;
-
-        }
-
-        #footer {
-            font-size:10px;
-            text-align:center;
-        }
+       
 
     </style>
 
@@ -74,21 +30,22 @@
 
 
 
-<body style="background-color:rgba(216, 73, 245, 0.253);">
+<body style="background-color:rgba(245, 219, 73, 0.842);">
 
     <!--Build your Table and Form here-->
 
     <div class="container">
-        <img src="images/ladies-night-neon-banner.jpg" alt="Ladies Night ladies-night-neon-banner" style="width:100%;">
+        <img src="images/Party Flyer.jpg" alt="Kids Party Banner" style="width: 200px;">
     
     </div> 
     <hr>
     
 
-    <h1>Magic Mike Party Request Registration Form</h1>
-    <h3><em></em>(Must Be 21 To Book & Attend. No Exceptions)</em></h3>
+    <h1>Kids Party Request Registration Form</h1>
+    
     
     <hr>
+
 
     <form method="GET" action="confirm.html">
 
@@ -115,12 +72,12 @@
                 <tr>
                     <!--first column - LABEL -->
                     <td>
-                        <label for="fName">First Name:</label>
+                        <label for="Name">First Name:</label>
                     </td>
 
                     <!--second column- INPUT -->
                     <td>
-                        <input type="text" name="fName" id="fName">
+                        <input type="text" name="Name" id="Name">
                     </td>
 
                 </tr>
@@ -144,7 +101,7 @@
                 <tr>
                     <!--first column - LABEL -->
                     <td>
-                        <label for="age">Age:</label>
+                        <label for="age"> Child's Age:</label>
                     </td>
 
                     <!--second column- INPUT -->
@@ -179,27 +136,27 @@
 
                     <td>
 
-                        <label for="faveColor">Choose Your favorite Dancer: </label>
+                        <label for="Attending">Choose Amount of Kids Attending : </label>
 
                     </td>
 
                     <td>
 
-                        <select name="faveColor">
+                        <select name="Attending">
 
-                            <option value="Tatum">Magic Mike (Channing Tatum)</option>
+                            <option value="10">10+</option>
 
-                            <option value="Cavill">Geralt of Rivia (Henry Cavill)</option>
+                            <option value="20">20+</option>
 
-                            <option value="Momoa">Khal Drogo (Jason Momoa)</option>
+                            <option value="30">30+</option>
 
-                            <option value="Bloom">Will Turner (Orlando Bloom)</option>
+                            <option value="40">40+</option>
 
-                            <option value="Christensen">Darth Vader (Haden Christensen)</option>
+                            <option value="50">50+</option>
 
-                            <option value="Pitt">Archilles (Brad Pitt)</option>
+                            <option value="60">60+</option>
 
-                            <option value="Alba">Rufus Buck (Idris Alba)</option>
+                            <option value="70">70+</option>
 
                         </select>
 
@@ -219,107 +176,122 @@
 
                     <td>
 
-                        <input type="radio" name="study" value="AE"> Magic Mike Surprise <br>
+                        <input type="radio" name="study" value="Toy Story">Toy Story <br>
 
-                        <input type="radio" name="study" value="AE"> Lush Vampire Theme<br>
+                        <input type="radio" name="study" value="Blue">Blue's Clues <br>
 
-                        <input type="radio" name="study" value="GRT">Greco-Roman Theme<br>
+                        <input type="radio" name="study" value="Princess">Princess<br>
 
-                        <input type="radio" name="study" value="SW">Star Wars Theme<br>
+                        <input type="radio" name="study" value="Unicorns">Unicorns<br>
 
-                        <input type="radio" name="study" value="WWW">Wild, Wild West Theme<br>
+                        <input type="radio" name="study" value="Peppa Pig">Peppa Pig<br>
 
-                        <input type="radio" name="study" value="POTC">Pirates of the Carribean theme<br>
+                        <input type="radio" name="study" value="Paw Patrol">Paw Patrol<br>
 
-                        <input type="radio" name="study" value="MM">Mysterious Masquerade Theme<br>
+                        <input type="radio" name="study" value="Baby Shark">Baby Shark<br>
+
+                        <input type="radio" name="study" value="Spiderman">Spiderman<br>
+
+                        <input type="radio" name="study" value="Batman"> Batman<br>
+
+                        <input type="radio" name="study" value="Superman">Superman<br>
+
+                    
+
+                    </td>
+
+                </tr>
+
+                <!--checkboxes allow for multiple responses-->
+
+                <tr>
+
+                    <td>
+
+                        <label for="Character">Select up to 2 more Characters. </label>
+                          <p>Any Additional Characters, Cost An Adddiotnal $300. </p>
+                    </td>
+
+                    <td>
+
+                        <input type="checkbox" name="Character" value="Buzz">Buzz Lightyear<br>
+
+                        <input type="checkbox" name="Character" value="woody">Woody<br>
+
+                        <input type="checkbox" name="Character" value="Peppa">Peppa<br>
+
+                        <input type="checkbox" name="Character" value="Chase">Chase<br>
+
+                        <input type="checkbox" name="Character" value="Unicorn">Rainbow Unicorn<br>
+
+                        <input type="checkbox" name="Character" value="Superman">Superman<br>
+
+                        <input type="checkbox" name="Character" value="Batman"> Batman<br>
+
+                        <input type="checkbox" name="Character" value="Spiderman">Spiderman<br>
+
+                        <input type="checkbox" name="Character" value="Cinderella">Cinderella<br>
+
+                        <input type="checkbox" name="Character" value="Brooklyn">Baby Shark <br>
+
+                        <input type="checkbox" name="Character" value="Blue">Blue <br>
+
                         
-                        <input type="radio" name="study" value="GOT">Game Of Thrones Theme <br>
 
                     </td>
 
                 </tr>
 
-                <!--checkboxes allow for multiple responses-->
+                    <td>
+
+                        <Label for="Cake Flavor" name="Flavor">Flavor of Cake<br>
+
+                    </td>
+
+
+
+
+
+
+                    <td>
+
+                        <select name="Attending">
+
+
+                         <option value="Vanilla">Vanilla</option>
+
+                         <option value="Chocolate">Chocolate</option>
+
+                         <option value="Strawberry">Strawberry</option>
+
+                         <option value="Marble">Marble</option>
+
+                         <option value="Red Velvet">Red Velvet</option>
+
+                    
+
+                        </select>
+
+                    </td>
+
+             
 
                 <tr>
 
                     <td>
 
-                        <label for="Dancer">Select up to 5 Dancers </label>
-                          <p>Any Additional Dancers Cost An Adddiotnal $5000. </p>
+                        <label for="favorite color"><label>Choose Your Favorite Color<br>
+
+
                     </td>
 
                     <td>
 
-                        <input type="checkbox" name="Dancer1" value="Channig Tatum">Channig Tatum<br>
+                        <input type="color" name="Color">
 
-                        <input type="checkbox" name="Dancer2" value="Henry Cavill">Henry Cavill<br>
-
-                        <input type="checkbox" name="Dancer3" value="Jason Momoa">Jason Momoa<br>
-
-                        <input type="checkbox" name="Dancer4" value="Orlando Bloom">Orlando Bloom <br>
-
-                        <input type="checkbox" name="Dancer5" value="Haden Christensen">Haden Christensen <br>
-
-                        <input type="checkbox" name="Dancer6" value="Brad Pitt">Brad Pitt <br>
-
-                        <input type="checkbox" name="Dancer7" value="Idris Alba">Idris Alba<br>
-
-                        <input type="checkbox" name="Dancer8" value="Joe Manganiello">Joe Manganiello<br>
-
-                        <input type="checkbox" name="Dancer9" value="Richard madden">Richard Madden <br>
-
-                        <input type="checkbox" name="Dancer10" value="LaKeith Stabfield">LaKeith Stabfield<br>
-
-                        <input type="checkbox" name="Dancer11" value="Pedro Pascal">Pedro Pascal<br>
-
-                        <input type="checkbox" name="Dancer12" value="Tom Cruise">Tom Cruise <br>
-
-                        <input type="checkbox" name="Dancer13" value="Micheal B Jordan"> Micheal B Jordan<br>
 
                     </td>
 
-                </tr>
-
-                <!--checkboxes allow for multiple responses-->
-
-                <tr>
-
-                    <td>
-
-                        <label for="Drinks">Select up to 5 Unlimited drinks </label>
-                          <p>Any Additional Drinks Cost An Adddiotnal 300. </p>
-                    </td>
-
-                    <td>
-
-                        <input type="checkbox" name="Dancer1" value="White Sangria">Picther's of White Sangria <br>
-
-                        <input type="checkbox" name="Dancer2" value="Red Sangria">Picther's of Red Sangria <br>
-
-                        <input type="checkbox" name="Dancer3" value="Jason Momoa">Momoa Momosa's<br>
-
-                        <input type="checkbox" name="Dancer4" value="Orlando Bloom">Bloomin'Rose <br>
-
-                        <input type="checkbox" name="Dancer5" value="Haden Christensen">Haden Heaven <br>
-
-                        <input type="checkbox" name="Dancer6" value="Brad Pitt">That's It or Had It Brad Pitt <br>
-
-                        <input type="checkbox" name="Dancer7" value="Idris Alba">Delis Idris<br>
-
-                        <input type="checkbox" name="Dancer8" value="  Manganiello">Marvelous Manganiello<br>
-
-                        <input type="checkbox" name="Dancer9" value="Richard madden">Madden Hell and Heaven<br>
-
-                        <input type="checkbox" name="Dancer10" value="LaKeith Stabfield">Eyes Peeled Stanfield<br>
-
-                        <input type="checkbox" name="Dancer11" value="Pedro Pascal">Prosseco Pascal<br>
-
-                        <input type="checkbox" name="Dancer12" value="Tom Cruise">Cruise'n 4 a Bruisin<br>
-
-                        <input type="checkbox" name="Dancer13" value="Jordan B Jordan"> MBJ<br>
-
-                    </td>
 
                 </tr>
 
