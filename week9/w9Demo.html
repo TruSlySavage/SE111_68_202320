@@ -117,8 +117,61 @@ console.dir()---selecting with this shows the element in console as an object th
             body.appendChild(tempDiv)
 
         }    
+
+
+        console.log(people[0])    
+        console.log(people[0].first)
         
-        
+        var body = document.querySelector('body')
+        console.log(body)
+        console.dir(body)
+
+       // body.innerhtml += '<div><p>${people[0].first} is first</p></div>'
+
+
+        for(let i = 0; i <people.lenght; i++)
+        {
+
+            var tempDiv = document.createElement('h3') //('div')
+            var name = document.createTextNode(key)
+
+            tempDiv.setAttribute('id' , '${i}') //'${i}''
+
+
+            tempDiv.setAttribute('class', 'red')
+
+            for(key in people[i])
+            {
+
+                var p1 = document.createElement('h3')
+                var text1 = document.createTextNode(key)
+
+
+                p1.appendChild(text1)
+                tempDiv.appendChild(p1)
+
+
+                var p = document.createElement('p')
+                var text = document.createTextNode(people[i][key])
+
+                p.appendChild(text)
+                tempDiv.appendChild(p)
+
+
+
+
+            }
+
+            body.appendChild(tempDiv)
+
+
+
+
+
+        }
+
+
+
     </script>
 
 
