@@ -27,7 +27,7 @@
         </tr>
 
         <tr>
-        
+       
             <td></td>
             <td><input id="button" type="button" value="submit"></td>
         </tr>
@@ -99,22 +99,22 @@
 
         //Bubble sort people on the last name
         for(let i=0; i < people.length-1; i++)
-    
+   
         {
-        for(let j=0; j < people.length-1; j++)
+            for(let j=0; j < people.length-1; j++)
 
-        {
+            {
 
-        if(people[j].last > people[j+1].last)
+                if(people[j].last > people[j+1].last)
 
-        {
+                {
 
-        let temp = people[j]
-        people[j] = people[j+1]
-        people[j+1] = temp
-        }
+                    let temp = people[j]
+                    people[j] = people[j+1]
+                    people[j+1] = temp
+                }   
 
-        }
+            }
 
 
         }//end of bubble sort algorithm!
@@ -133,7 +133,7 @@
         //Loop through each property in the object
         for(key in people[i])
         {
-        output += `<p>${people[i][key].toUpperCase()}</p>`
+        output += `<p><b>${key.toUpperCase()}</b>: ${people[i][key].toUpperCase()}</p>`
         //alert(people[i][key])
         //The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
         //Output will resemble:
@@ -161,4 +161,3 @@
 
 </body>
 </html>
-
