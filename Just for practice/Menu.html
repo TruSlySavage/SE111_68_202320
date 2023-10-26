@@ -4,31 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-        }
-
-        header {
-            text-align: center;
-            background-color: #f8f8f8;
-            padding: 10px;
-            border-bottom: 2px solid #ccc;
-        }
-
-        section {
-            margin-top: 20px;
-        }
-
-        .menu-item {
-            margin-bottom: 30px;
-        }
-
-        h2, h3 {
-            color: #333;
-        }
-    </style>
+    <!-- Add your CSS styles here if needed -->
 </head>
 <body>
 
@@ -381,135 +357,24 @@
                 </select>
             </div>
 
-            <!-- Caprese Salad -->
+            <!-- Greek Salad -->
             <div class="menu-item">
-                <h3>Caprese Salad</h3>
+                <h3>Greek Salad</h3>
 
-                <label for="capreseSaladIngredients">What are the main ingredients?</label>
-                <select id="capreseSaladIngredients" name="capreseSaladIngredients">
-                    <option value="tomatoMozzarellaBasilBalsamicGlaze">A) Tomato, Mozzarella, Basil, Balsamic Glaze</option>
-                    <option value="avocadoFetaCucumberDillSourCream">B) Avocado, Feta, Cucumber, Dill, Sour Cream</option>
-                    <option value="watermelonFetaMintBalsamicReduction">C) Watermelon, Feta, Mint, Balsamic Reduction</option>
-                    <option value="strawberrySpinachGoatBalsamicVinaigrette">D) Strawberry, Spinach, Goat, Balsamic Vinaigrette</option>
-                </select>
-            </div>
-
-            <!-- Cobb Salad -->
-            <div class="menu-item">
-                <h3>Cobb Salad</h3>
-
-                <label for="cobbSaladIngredients">What are the ingredients in the Cobb Salad?</label>
-                <select id="cobbSaladIngredients" name="cobbSaladIngredients">
-                    <option value="chickenBaconAvocadoBlueCheeseEgg">A) Chicken, Bacon, Avocado, Blue Cheese, Egg</option>
-                    <option value="shrimpFetaOlivesTomatoCucumber">B) Shrimp, Feta, Olives, Tomato, Cucumber</option>
-                    <option value="beefMushroomsCheddarOnionPeppers">C) Beef, Mushrooms, Cheddar, Onion, Peppers</option>
-                    <option value="turkeyHamSwissHardBoiledEgg">D) Turkey, Ham, Swiss, Hard-Boiled Egg</option>
-                </select>
-
-                <br>
-
-                <label for="cobbDressing">What dressing comes with this salad?</label>
-                <select id="cobbDressing" name="cobbDressing">
-                    <option value="ranch">A) Ranch</option>
-                    <option value="blueCheese">B) Blue Cheese</option>
-                    <option value="balsamicVinaigrette">C) Balsamic Vinaigrette</option>
-                    <option value="honeyMustard">D) Honey Mustard</option>
+                <label for="greekIngredients">What are the two ingredients that make this salad “Greek”?</label>
+                <select id="greekIngredients" name="greekIngredients">
+                    <option value="fetaKalamataOlives">A) Feta cheese & Kalamata olives</option>
+                    <option value="cheddarBlackOlives">B) Cheddar cheese & Black olives</option>
+                    <option value="parmesanGreenOlives">C) Parmesan cheese & Green olives</option>
+                    <option value="blueCheeseSpanishOlives">D) Blue cheese & Spanish olives</option>
                 </select>
             </div>
         </div>
 
-        <!-- DESSERTS -->
-        <div class="menu-item">
-            <h2>DESSERTS</h2>
+    </section>
 
-            <!-- Chocolate Lava Cake -->
-            <div class="menu-item">
-                <h3>Chocolate Lava Cake</h3>
+    <!-- The rest of your webpage content goes here -->
 
-                <label for="lavaCakeDescription">Describe the Chocolate Lava Cake and what does it come with?</label>
-                <select id="lavaCakeDescription" name="lavaCakeDescription">
-                    <option value="moltenChocolateCenterVanillaIceCream">A) Molten chocolate center, served with vanilla ice cream</option>
-                    <option value="gooeyFudgeFillingWhippedCream">B) Gooey fudge filling, topped with whipped cream</option>
-                    <option value="caramelDrizzleNutsChocolateShavings">C) Caramel drizzle, nuts, chocolate shavings</option>
-                    <option value="berryCompotePowderedSugarMintLeaf">D) Berry compote, powdered sugar, mint leaf</option>
-                </select>
-            </div>
+</body>
+</html>
 
-            <!-- Tiramisu -->
-            <div class="menu-item">
-                <h3>Tiramisu</h3>
-
-                <label for="tiramisuIngredients">What are the main ingredients of Tiramisu?</label>
-                <select id="tiramisuIngredients" name="tiramisuIngredients">
-                    <option value="ladyfingersMascarponeEspressoCocoa">A) Ladyfingers, Mascarpone, Espresso, Cocoa</option>
-                    <option value="cakeCustardCoffeeLiqueurChocolate">B) Cake, Custard, Coffee Liqueur, Chocolate</option>
-                    <option value="pastryCreamRumCoffeeBeansPowder">C) Pastry Cream, Rum, Coffee Beans, Powdered Sugar</option>
-                    <option value="spongeCakeMarsalaWineCinnamon">D) Sponge Cake, Marsala Wine, Cinnamon</option>
-                </select>
-            </div>
-
-            <!-- Cheesecake -->
-            <div class="menu-item">
-                <h3>Cheesecake</h3>
-
-                <label for="cheesecakeToppings">What toppings do we offer for the Cheesecake?</label>
-                <select id="cheesecakeToppings" name="cheesecakeToppings">
-                    <option value="strawberryBlueberryRaspberryMango">A) Strawberry, Blueberry, Raspberry, Mango</option>
-                    <option value="chocolateCaramelNutsWhippedCream">B) Chocolate, Caramel, Nuts, Whipped Cream</option>
-                    <option value="lemonCurdBerryCompoteGrahamCracker">C) Lemon Curd, Berry Compote, Graham Cracker</option>
-                    <option value="peachCherryPineappleCoconut">D) Peach, Cherry, Pineapple, Coconut</option>
-                </select>
-            </div>
-
-            <!-- Baklava -->
-            <div class="menu-item">
-                <h3>Baklava</h3>
-
-                <label for="baklavaNuts">What nuts are in our Baklava?</label>
-                <select id="baklavaNuts" name="baklavaNuts">
-                    <option value="walnutsAlmondsPistachiosHazelnuts">A) Walnuts, Almonds, Pistachios, Hazelnuts</option>
-                    <option value="pecansCashewsMacadamiaPineNuts">B) Pecans, Cashews, Macadamia, Pine Nuts</option>
-                    <option value="peanutsBrazilNutsCoconut">C) Peanuts, Brazil Nuts, Coconut</option>
-                    <option value="sunflowerSeedsPumpkinSeedsChiaSeeds">D) Sunflower Seeds, Pumpkin Seeds, Chia Seeds</option>
-                </select>
-
-                <br>
-
-                <label for="baklavaHoney">What is Baklava brushed with to give it a sweet taste?</label>
-                <select id="baklavaHoney" name="baklavaHoney">
-                    <option value="mapleSyrup">A) Maple Syrup</option>
-                    <option value="cornSyrup">B) Corn Syrup</option>
-                    <option value="honey">C) Honey</option>
-                    <option value="agaveNectar">D) Agave Nectar</option>
-                </select>
-            </div>
-
-            <!-- Strawberry Shortcake -->
-            <div class="menu-item">
-                <h3>Strawberry Shortcake</h3>
-
-                <label for="shortcakeLayers">What are the layers in our Strawberry Shortcake?</label>
-                <select id="shortcakeLayers" name="shortcakeLayers">
-                    <option value="biscuitStrawberriesCream">A) Biscuit, Strawberries, Cream</option>
-                    <option value="cakeBlueberriesMascarpone">B) Cake, Blueberries, Mascarpone</option>
-                    <option value="cookiesRaspberriesWhippedCream">C) Cookies, Raspberries, Whipped Cream</option>
-                    <option value="pastryStrawberryCompoteVanillaIceCream">D) Pastry, Strawberry Compote, Vanilla Ice Cream</option>
-                </select>
-            </div>
-
-            <!-- Ice Cream -->
-            <div class="menu-item">
-                <h3>Ice Cream</h3>
-
-                <label for="iceCreamFlavors">What flavors of Ice Cream do we offer?</label>
-                <select id="iceCreamFlavors" name="iceCreamFlavors">
-                    <option value="vanillaChocolateStrawberry">A) Vanilla, Chocolate, Strawberry</option>
-                    <option value="mintChocolateChipRockyRoad">B) Mint Chocolate Chip, Rocky Road</option>
-                    <option value="butterPecanCookieDoughSaltedCaramel">C) Butter Pecan, Cookie Dough, Salted Caramel</option>
-                    <option value="coffeeRumRaisinMangoSorbet">D) Coffee, Rum Raisin, Mango Sorbet</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <input type="submit" value="Submit">
-</form>
