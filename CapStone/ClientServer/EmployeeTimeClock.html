@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Schedule</title>
+    <!-- Include your existing styles or external stylesheets here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your existing HTML content -->
+
+<h2>Employee Schedule</h2>
+
+<!-- Dropdown menu for selecting employees -->
+<label for="employeeSelect">Select Employee:</label>
+<select id="employeeSelect">
+    <option value="homer">Homer Simpson</option>
+    <option value="chief">Chief Wiggum</option>
+    <option value="barney">Barney Gumble</option>
+    <!-- Add more options for other characters -->
+</select>
+
+<!-- Buttons for clocking in and out -->
+<button onclick="clockInOut('Monday')">Clock In</button>
+<button onclick="clockInOut('Tuesday')">Clock In</button>
+<button onclick="clockInOut('Wednesday')">Clock In</button>
+<button onclick="clockInOut('Thursday')">Clock In</button>
+<button onclick="clockInOut('Friday')">Clock In</button>
+
+<!-- Display clock-in/out information -->
+<p id="clockInfo"></p>
+
+<!-- Schedule table -->
+<table>
+    <tr>
+        <th>Employee</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+    </tr>
+    <tr>
+        <td>Homer Simpson</td>
+        <td id="homerMonday"></td>
+        <td id="homerTuesday"></td>
+        <td id="homerWednesday"></td>
+        <td id="homerThursday"></td>
+        <td id="homerFriday"></td>
+    </tr>
+    <tr>
+        <td>Chief Wiggum</td>
+        <td id="chiefMonday"></td>
+        <td id="chiefTuesday"></td>
+        <td id="chiefWednesday"></td>
+        <td id="chiefThursday"></td>
+        <td id="chiefFriday"></td>
+    </tr>
+    <tr>
+        <td>Barney Gumble</td>
+        <td id="barneyMonday"></td>
+        <td id="barneyTuesday"></td>
+        <td id="barneyWednesday"></td>
+        <td id="barneyThursday"></td>
+        <td id="barneyFriday"></td>
+    </tr>
+    <!-- Add more rows for other characters -->
+</table>
+
+<script>
+    // Function to handle clock-in and clock-out
+    function clockInOut(day) {
+        const selectedEmployee = document.getElementById('employeeSelect').value;
+        const cellId = `${selectedEmployee}${day}`;
+        const cell = document.getElementById(cellId);
+        const clockInfo = document.getElementById('clockInfo');
+
+        if (cell.innerHTML === '') {
+            // Clock-in
+            const currentTime = new Date().toLocaleTimeString();
+            cell.innerHTML = `Clock In: ${currentTime}`;
+            clockInfo.innerHTML = `${selectedEmployee} clocked in on ${day}.`;
+        } else {
+            // Clock-out
+            const currentTime = new Date().toLocaleTimeString();
+            cell.innerHTML += `<br>Clock Out: ${currentTime}`;
+            clockInfo.innerHTML = `${selectedEmployee} clocked out on ${day}.`;
+        }
+    }
+</script>
+
+</body>
+</html>
+

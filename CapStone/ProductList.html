@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duff Beer Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #5cb5e5fd;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        nav {
+            background-color: #cec80c;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        ol {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    
+
+    <header>
+
+        <img src="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\images\Duff Beer Company Logo.jpg" alt="Resized Image" width="100%" height="700">
+         
+    </header>
+
+    <nav>
+        <a href="ClientWeb.html">Home</a>
+        <a href="ProductList.html">Product List</a>
+        <a href="Contacts.html">Contact</a>
+    </nav>
+
+</head>
+
+
+<body>
+
+        <div class="product">
+            <h2>Duff Beer</h2>
+            <img src="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\images\6 pack duff beer.jpg" alt="Resized Image" width="25%" width="100%">
+            <p>The iconic and beloved fictional brew from 'The Simpsons.' With its distinctive red label and bold lettering, Duff Beer is a symbol of mass appeal.</p>
+            <p>Price: $5.99</p>
+            <button class="buy-button" onclick="addToCart('Duff Beer', 5.99)">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Duff Light</h2>
+            <p>A lighter option for those seeking fewer calories and a lower alcohol content. Perfect for health-conscious consumers.</p>
+            <p>Price: $4.99</p>
+            <button class="buy-button" onclick="addToCart('Duff Light', 4.99)">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Duff Dry</h2>
+            <p>A crisper taste with less sweetness. Ideal for those who prefer a drier beer experience.</p>
+            <p>Price: $6.49</p>
+            <button class="buy-button" onclick="addToCart('Duff Dry', 6.49)">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Duff Blue</h2>
+            <p>An experimental and limited edition beer with a distinct blue color. Adds an element of novelty to the product line.</p>
+            <p>Price: $7.99</p>
+            <button class="buy-button" onclick="addToCart('Duff Blue', 7.99)">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Duff Adequate</h2>
+            <p>A humorous take on the concept of an average or mediocre beer. Satirizes the idea that not every product in a brand lineup is exceptional.</p>
+            <p>Price: $3.99</p>
+            <button class="buy-button" onclick="addToCart('Duff Adequate', 3.99)">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Duff Premium</h2>
+            <p>Coming Soon...</p>
+            <p>Experience the epitome of beer perfection with Duff Premium. Crafted with the finest ingredients, it's the connoisseur's choice for an unparalleled beer-drinking experience.</p>
+            <p>Price: $9.99</p>
+            <button class="buy-button" onclick="addToCart('Duff Premium', 5.99)">Buy Now</button>
+        </div>
+        
+
+<script>
+    function addToCart(productName, price) {
+        alert(`Added ${productName} to your cart. Total: $${price.toFixed(2)}`);
+        // You can customize this function to add products to a shopping cart on your website.
+    }
+</script>
+
+</body>
+</html>
