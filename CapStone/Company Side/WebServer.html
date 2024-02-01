@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Beer Company</title>
+   
+
+    <style>
+        /* Navigation Styles */
+        nav {
+            background-color: #cec80c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #000000;
+            margin-right: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+        /* Footer Styles */
+        footer {
+            background-color: #fffdfd;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .employee {
+            margin-bottom: 20px;
+        }
+        
+
+    </style>    
+
+
+
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\WebServer.html">Home</a>
+            <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Account.Management.html">Account Management</a>
+            <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Contacts.2.html">Contact</a>
+            <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\ClientServer\Employee.Time.Clock.html">Employee Schedule</a>
+        </ul>
+    </nav>
+
+    <!-- Homepage -->
+    <section id="home">
+        <h1></h1>
+        <p>"Fueling innovation, fostering connection. Together, we build a brighter future."</p>
+    </section>
+
+   
+
+   
+
+    <!-- Account Management -->
+    <section id="account">
+        <h2>Account Management</h2>
+        <!-- Add login form, order history, and account settings features -->
+        <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Add more account management features as needed -->
+    </section>
+
+
+   
+    </section>
+
+    <h2>Employee Contact Information</h2>
+
+    <!-- Dropdown menu for Simpsons characters -->
+    <div class="employee">
+        <h3>
+            <select onchange="showContactInfo(this)">
+                <option value="default">Select a Employee</option>
+                <option value="marge">Marge Simpson</option>
+                <option value="maggie">Maggie Simpson</option>
+                <option value="lisa">Lisa Simpson</option> 
+                <option value="bart">Bart Simpson</option>
+                <option value="homer">Homer Simpson</option>
+                <option value="chief">Chief Wiggum</option>
+                <option value="barney">Barney Gumble</option>
+                <option value="apu">Apu Nahasapeemapetilon</option>
+                <option value="sideshow">Sideshow Bob</option>
+                <option value="ned">Ned Flanders</option>
+                <option value="moe">Moe Szyslak</option>
+                <option value="smithers">Waylon Smithers</option>
+                <option value="hibbert">Dr. Hibbert</option>
+                <option value="tony">Fat Tony</option>
+                <option value="skinner">Principal Seymour Skinner</option>
+                <option value="willie">Groundskeeper Willie</option>
+                <option value="lovejoy">Reverend Lovejoy</option>
+                <option value="burns">Mr. Burns</option>
+                <!-- Add more options for other characters -->
+            </select>
+        </h3>
+
+        <p id="margeInfo" style="display:none;">
+            Email: <a href="mailto:marge.simpson@example.com">marge.simpson@example.com</a><br>
+            Phone: +1 (555) 111-2222
+        </p>
+        <p id="maggieInfo" style="display:none;">
+            Email: <a href="mailto:maggie.simpson@example.com">maggie.simpson@example.com</a><br>
+            Phone: +1 (555) 111-2222
+        </p>
+        <p id="lisaInfo" style="display:none;">
+            Email: <a href="mailto:lisa.simpson@example.com">lisa.simpson@example.com</a><br>
+            Phone: +1 (555) 111-2222
+        </p>
+        <p id="bartInfo" style="display:none;">
+            Email: <a href="mailto:bart.simpson@example.com">bart.simpson@example.com</a><br>
+            Phone: +1 (555) 111-2222
+        </p>
+        <p id="homerInfo" style="display:none;">
+            Email: <a href="mailto:homer.simpson@example.com">homer.simpson@example.com</a><br>
+            Phone: +1 (555) 111-2222
+        </p>
+        <p id="chiefInfo" style="display:none;">
+            Email: <a href="mailto:chief.wiggum@example.com">chief.wiggum@example.com</a><br>
+            Phone: +1 (555) 333-4444
+        </p>
+        <p id="barneyInfo" style="display:none;">
+            Email: <a href="mailto:barney.gumble@example.com">barney.gumble@example.com</a><br>
+            Phone: +1 (555) 555-6666
+        </p>
+        <p id="apuInfo" style="display:none;">
+            Email: <a href="mailto:apu.nahasapeemapetilon@example.com">apu.nahasapeemapetilon@example.com</a><br>
+            Phone: +1 (555) 777-8888
+        </p>
+        <p id="sideshowInfo" style="display:none;">
+            Email: <a href="mailto:sideshow.bob@example.com">sideshow.bob@example.com</a><br>
+            Phone: +1 (555) 999-0000
+        </p>
+        <p id="nedInfo" style="display:none;">
+            Email: <a href="mailto:ned.flanders@example.com">ned.flanders@example.com</a><br>
+            Phone: +1 (555) 111-2233
+        </p>
+        <p id="moeInfo" style="display:none;">
+            Email: <a href="mailto:moe.szyslak@example.com">moe.szyslak@example.com</a><br>
+            Phone: +1 (555) 445-5566
+        </p>
+        <p id="smithersInfo" style="display:none;">
+            Email: <a href="mailto:waylon.smithers@example.com">waylon.smithers@example.com</a><br>
+            Phone: +1 (555) 667-7788
+        </p>
+        <p id="hibbertInfo" style="display:none;">
+            Email: <a href="mailto:dr.hibbert@example.com">dr.hibbert@example.com</a><br>
+            Phone: +1 (555) 889-9900
+        </p>
+        <p id="tonyInfo" style="display:none;">
+            Email: <a href="mailto:fat.tony@example.com">fat.tony@example.com</a><br>
+            Phone: +1 (555) 112-2233
+        </p>
+        <p id="skinnerInfo" style="display:none;">
+            Email: <a href="mailto:principal.skinner@example.com">principal.skinner@example.com</a><br>
+            Phone: +1 (555) 334-4455
+        </p>
+        <p id="willieInfo" style="display:none;">
+            Email: <a href="mailto:groundskeeper.willie@example.com">groundskeeper.willie@example.com</a><br>
+            Phone: +1 (555) 556-6677
+        </p>
+        <p id="lovejoyInfo" style="display:none;">
+            Email: <a href="mailto:reverend.lovejoy@example.com">reverend.lovejoy@example.com</a><br>
+            Phone: +1 (555) 778-8899
+        </p>
+        <p id="burnsInfo" style="display:none;">
+            Email: <a href="mailto:mr.burns@example.com">mr.burns@example.com</a><br>
+            Phone: +1 (555) 990-0011
+        </p>
+        <!-- Add more contact info for other characters -->
+    </div>
+
+        <script>
+            function showContactInfo(selectElement) {
+                const character = selectElement.value;
+                const infoElement = document.getElementById(`${character}Info`);
+                const allInfoElements = document.querySelectorAll('.employee p');
+
+                // Hide all contact info elements
+                allInfoElements.forEach(element => {
+                    element.style.display = 'none';
+                });
+
+                // Show the selected contact info element
+                if (infoElement) {
+                    infoElement.style.display = 'block';
+                }
+            }
+        </script>
+
+    
+    
+    <footer>
+        <p>2024 Duff Beer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

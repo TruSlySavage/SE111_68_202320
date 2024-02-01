@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2ecc71;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        form {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Duff Web Server</h1>
+    </header>
+
+    <nav>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Server.Manager.html">Home</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\ClientPage.html">Client Management</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Employee.Time.Clock.html">Employee Portal</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Contacts.2.html">Contacts</a>
+       
+    </nav>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Client</th>
+                <th>Account</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Client 1</td>
+                <td>Active</td>
+                <td><button>Stop</button></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Client 2</td>
+                <td>Inactive</td>
+                <td><button>Start</button></td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Client 3</td>
+                <td>Active</td>
+                <td><button>Stop</button></td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Client 4</td>
+                <td>Inactive</td>
+                <td><button>Start</button></td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Client 5</td>
+                <td>Active</td>
+                <td><button>Stop</button></td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Client 6</td>
+                <td>Inactive</td>
+                <td><button>Start</button></td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Client 7</td>
+                <td>Active</td>
+                <td><button>Stop</button></td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Client 8</td>
+                <td>Inactive</td>
+                <td><button>Start</button></td>
+            </tr>
+            <tr>
+                <td>009</td>
+                <td>Client 9</td>
+                <td>Active</td>
+                <td><button>Stop</button></td>
+            </tr>
+            <tr>
+                <td>010</td>
+                <td>Client 10</td>
+                <td>Inactive</td>
+                <td><button>Start</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <form>
+        <h2>Add New Client</h2>
+        <label for="serverName">Client Name:</label>
+        <input type="text" id="serverName" name="serverName" required>
+
+        <input type="submit" value="Add Client">
+    </form>
+
+    <footer>
+        <p>2024 Duff Beer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

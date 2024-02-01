@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Schedule</title>
+    <style>
+
+
+
+        /* Navigation Styles */
+        nav {
+            background-color: #cec80c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #000000;
+            margin-right: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Server.Manager.html">Home</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\ClientPage.html">Client Management</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Employee.Time.Clock.html">Employee Portal</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Contacts.2.html">Contacts</a>
+       
+    </nav>
+
+
+
+
+
+
+
+<h2>Employee Schedule</h2>
+
+<label for="employeeSelect">Select Employee:</label>
+<select id="employeeSelect"></select>
+
+<label for="daySelect">Select Day:</label>
+<select id="daySelect">
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+</select>
+
+<label for="clockSelect">Select Action:</label>
+<select id="clockSelect">
+    <option value="clockIn">Clock In</option>
+    <option value="clockOut">Clock Out</option>
+    <option value="breakIn">Break In</option>
+    <option value="breakOut">Break Out</option>
+</select>
+
+<button onclick="confirmAction()">Apply</button>
+
+<p id="clockInfo"></p>
+
+<table>
+    <thead>
+        <tr><th>Employee</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
+    </thead>
+    <tbody id="scheduleBody"></tbody>
+</table>
+
+<script>
+    const employees = ["Homer Simpson", "Chief Wiggum", "Barney Gumble", "Marge Simpson", "Apu Nahasapeemapetilon", "Sideshow Bob", "Ned Flanders", "Moe Szyslak", "Edna Krabappel", "Fat Tony", "Seymour Skinner", "Groundskeeper Willie", "Reverend Lovejoy", "Mr. Burns", "Maggie Simpson", "Bart Simpson", "Lisa Simpson"];
+
+    const employeeSelect = document.getElementById('employeeSelect');
+    const daySelect = document.getElementById('daySelect');
+    const clockSelect = document.getElementById('clockSelect');
+    const scheduleBody = document.getElementById('scheduleBody');
+    const clockInfo = document.getElementById('clockInfo');
+
+    employees.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name.toLowerCase().replace(' ', '');
+        option.textContent = name;
+        employeeSelect.appendChild(option);
+
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${name}</td><td id="${option.value}Monday"></td><td id="${option.value}Tuesday"></td><td id="${option.value}Wednesday"></td><td id="${option.value}Thursday"></td><td id="${option.value}Friday"></td>`;
+        scheduleBody.appendChild(row);
+    });
+
+    function confirmAction() {
+        const selectedEmployee = employeeSelect.value;
+        const selectedDay = daySelect.value;
+        const cell = document.getElementById(`${selectedEmployee}${selectedDay}`);
+        const currentTime = new Date().toLocaleString();
+
+        const actionMessage = getActionMessage();
+
+        const confirmMsg = `Are you sure you want to ${actionMessage} on ${selectedDay} for ${selectedEmployee}?`;
+        if (confirm(confirmMsg)) {
+            recordAction(selectedEmployee, selectedDay, cell, currentTime);
+        }
+    }
+
+    function getActionMessage() {
+        switch (clockSelect.value) {
+            case 'clockIn':
+                return 'clock in';
+            case 'clockOut':
+                return 'clock out';
+            case 'breakIn':
+                return 'take a break in';
+            case 'breakOut':
+                return 'take a break out';
+            default:
+                return '';
+        }
+    }
+
+    function recordAction(employee, day, cell, time) {
+        switch (clockSelect.value) {
+            case 'clockIn':
+                cell.innerHTML = `Clock In: ${time}`;
+                clockInfo.innerHTML = `${employee} clocked in on ${day}.`;
+                break;
+            case 'clockOut':
+                cell.innerHTML = `Clock Out: ${time}`;
+                clockInfo.innerHTML = `${employee} clocked out on ${day}.`;
+                break;
+            case 'breakIn':
+                cell.innerHTML = `Break In: ${time}`;
+                clockInfo.innerHTML = `${employee} took a break in on ${day}.`;
+                break;
+            case 'breakOut':
+                cell.innerHTML += `<br>Break Out: ${time}`;
+                clockInfo.innerHTML = `${employee} took a break out on ${day}.`;
+                break;
+            default:
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>

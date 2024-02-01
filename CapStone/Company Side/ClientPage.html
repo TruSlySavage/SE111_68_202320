@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #totals {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #2ecc71;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Server.Manager.html">Home</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\ClientPage.html">Client Management</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Employee.Time.Clock.html">Employee Portal</a>
+        <a href="C:\Users\tjrod\OneDrive\Desktop\SE111_68_202320\CapStone\Company Side\Contacts.2.html">Contacts</a>
+       
+    </nav>
+
+
+
+    <h2>Client List</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Client Name</th>
+            <th>Product Sales</th>
+            <th>Weekly Sales</th>
+            <th>Monthly Sales</th>
+            <th>Yearly Sales</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Replace the following rows with your actual client data -->
+        <tr>
+            <td>Client 1</td>
+            <td>$<span id="sales1">0</span></td>
+            <td><input type="number" id="weekly1" oninput="updateClientTotals(1)" /></td>
+            <td><input type="number" id="monthly1" oninput="updateClientTotals(1)" /></td>
+            <td><input type="number" id="yearly1" oninput="updateClientTotals(1)" /></td>
+        </tr>
+
+        <tr>
+            <td>Client 2</td>
+            <td>$<span id="sales2">0</span></td>
+            <td><input type="number" id="weekly2" oninput="updateClientTotals(2)" /></td>
+            <td><input type="number" id="monthly2" oninput="updateClientTotals(2)" /></td>
+            <td><input type="number" id="yearly2" oninput="updateClientTotals(2)" /></td>
+        </tr>
+
+        
+        <tr>
+            <td>Client 3</td>
+            <td>$<span id="sales3">0</span></td>
+            <td><input type="number" id="weekly3" oninput="updateClientTotals(3)" /></td>
+            <td><input type="number" id="monthly3" oninput="updateClientTotals(3)" /></td>
+            <td><input type="number" id="yearly3" oninput="updateClientTotals(3)" /></td>
+        </tr>
+        <!-- Add more rows as needed -->
+
+    </tbody>
+</table>
+
+    <!-- Calculate Total Buttons -->
+    <button onclick="calculateTotal('weekly')">Calculate Total Weekly Sales</button>
+    <button onclick="calculateTotal('monthly')">Calculate Total Monthly Sales</button>
+    <button onclick="calculateTotal('yearly')">Calculate Total Yearly Sales</button>
+
+    <!-- Totals Section -->
+    <div id="totals">
+        <p>Total Product Sales: $<span id="totalProductSales">0</span></p>
+        <p>Total Weekly Sales: $<span id="totalWeekly">0</span></p>
+        <p>Total Monthly Sales: $<span id="totalMonthly">0</span></p>
+        <p>Total Yearly Sales: $<span id="totalYearly">0</span></p>
+    </div>
+
+<script>
+    // Function to update individual client totals
+    function updateClientTotals(clientNumber) {
+        const weekly = parseFloat(document.getElementById(`weekly${clientNumber}`).value) || 0;
+        const monthly = parseFloat(document.getElementById(`monthly${clientNumber}`).value) || 0;
+        const yearly = parseFloat(document.getElementById(`yearly${clientNumber}`).value) || 0;
+
+        const totalSales = weekly + monthly + yearly;
+        document.getElementById(`sales${clientNumber}`).textContent = totalSales.toFixed(2);
+
+        // Update overall totals
+        updateOverallTotals();
+    }
+
+    // Function to update overall totals
+    function updateOverallTotals() {
+        let totalProductSales = 0;
+        let totalWeekly = 0;
+        let totalMonthly = 0;
+        let totalYearly = 0;
+
+        // Loop through rows and accumulate totals
+        for (let i = 1; i <= 18; i++) {
+            const productSales = parseFloat(document.getElementById(`sales${i}`).textContent) || 0;
+            const weekly = parseFloat(document.getElementById(`weekly${i}`).value) || 0;
+            const monthly = parseFloat(document.getElementById(`monthly${i}`).value) || 0;
+            const yearly = parseFloat(document.getElementById(`yearly${i}`).value) || 0;
+
+            totalProductSales += productSales;
+            totalWeekly += weekly;
+            totalMonthly += monthly;
+            totalYearly += yearly;
+        }
+
+        // Update total values in the HTML
+        document.getElementById('totalProductSales').textContent = totalProductSales.toFixed(2);
+        document.getElementById('totalWeekly').textContent = totalWeekly.toFixed(2);
+        document.getElementById('totalMonthly').textContent = totalMonthly.toFixed(2);
+        document.getElementById('totalYearly').textContent = totalYearly.toFixed(2);
+    }
+
+    // Function to calculate total weekly, monthly, or yearly sales
+    function calculateTotal(type) {
+        let total = 0;
+
+        // Loop through rows and accumulate totals based on the type
+        for (let i = 1; i <= 18; i++) {
+            const value = parseFloat(document.getElementById(`${type}${i}`).value) || 0;
+            total += value;
+        }
+
+        // Update the total value in the HTML
+        document.getElementById(`total${type.charAt(0).toUpperCase() + type.slice(1)}`).textContent = total.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
