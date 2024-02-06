@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety Certification Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #submit-btn {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Food Safety Certification Test</h1>
+
+    <div id="quiz">
+        <div class="question">
+            <h2>Question 1: What is the recommended temperature for storing perishable foods?</h2>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) 32°F (0°C)</label>
+                <label><input type="radio" name="q1" value="b"> b) 40°F (4°C)</label>
+                <label><input type="radio" name="q1" value="c"> c) 50°F (10°C)</label>
+                <label><input type="radio" name="q1" value="d"> d) 60°F (15°C)</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question 2: What is the danger zone for food temperatures?</h2>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) 40°F to 140°F (4°C to 60°C)</label>
+                <label><input type="radio" name="q2" value="b"> b) 32°F to 120°F (0°C to 49°C)</label>
+                <label><input type="radio" name="q2" value="c"> c) 50°F to 160°F (10°C to 71°C)</label>
+                <label><input type="radio" name="q2" value="d"> d) 45°F to 130°F (7°C to 54°C)</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Which of the following illnesses of a food service worker must be reported to the local regulatory agency (check all that apply):</h2>
+            <div class="options">
+                <label><input type="checkbox" name="q3a" value="a"> a. Jaundice</label>
+                <label><input type="checkbox" name="q3b" value="b"> b. Vomiting, fever and diarrhea</label>
+                <label><input type="checkbox" name="q3c" value="c"> c. Hepatitis A</label>
+                <label><input type="checkbox" name="q3d" value="d"> d. Salmonella Typhi</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Why is Food Safety Important?</h2>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> a. To prevent and stop foodborne illness and contaminants from getting into food and creating an outbreak</label>
+                <label><input type="radio" name="q4" value="b"> b. No loss of sales or business</label>
+                <label><input type="radio" name="q4" value="c"> c. To maintain a good reputation for the business</label>
+                <label><input type="radio" name="q4" value="d"> d. All of the above</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Identify the 5 most common risk factors to keeping food safe</h2>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> a. Purchasing ingredients from safe sources, holding foods at the wrong temperatures, poor hygiene practices, using contaminated tools & equipment, improper cooking of foods</label>
+                <label><input type="radio" name="q5" value="b"> b. Purchasing ingredients from unsafe sources, holding foods at the wrong temperatures, poor hygiene practices, using contaminated tools & equipment, improper cooking of foods</label>
+                <label><input type="radio" name="q5" value="c"> c. Purchasing ingredients from unsafe sources, holding foods at the wrong temperatures, poor hygiene practices, using contaminated tools & equipment, properly cooking foods</label>
+                <label><input type="radio" name="q5" value="d"> d. Purchasing ingredients from unsafe sources, holding foods at the right temperatures, poor hygiene practices, using contaminated tools & equipment, improper cooking of foods</label>
+            </div>
+        </div>
+
+        <!-- Add more questions as needed -->
+
+        <button id="submit-btn" onclick="submitQuiz()">Submit Answers</button>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Your Score:</h2>
+        <p id="score"></p>
+    </div>
+</div>
+
+<script>
+    function submitQuiz() {
+        // Calculate and display the score
+        var score = calculateScore();
+        document.getElementById('score').innerText = score + "%";
+
+        // Display the result section
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+    }
+
+    function calculateScore() {
+        // Add logic to calculate the score based on correct answers
+        var correctAnswers = 0;
+
+        // Example: Check the selected answer for each question
+        if (document.querySelector('input[name="q1"]:checked').value === 'b') {
+            correctAnswers++;
+        }
+
+        if (document.querySelector('input[name="q2"]:checked').value === 'a') {
+            correctAnswers++;
+        }
+
+        if (document.querySelector('input[name="q3a"]:checked') && document.querySelector('input[name="q3a"]:checked').value === 'a' &&
+            document.querySelector('input[name="q3b"]:checked') && document.querySelector('input[name="q3b"]:checked').value === 'b' &&
+            document.querySelector('input[name="q3c"]:checked') && document.querySelector('input[name="q3c"]:checked').value === 'c' &&
+            document.querySelector('input[name="q3d"]:checked') && document.querySelector('input[name="q3d"]:checked').value === 'd') {
+            correctAnswers++;
+        }
+
+        if (document.querySelector('input[name="q4"]:checked').value === 'a') {
+            correctAnswers++;
+        }
+
+        if (document.querySelector('input[name="q5"]:checked').value === 'a') {
+            correctAnswers++;
+        }
+
+        // Add similar checks for other questions
+
+        // Calculate the percentage score
+        var totalQuestions = 5; // Adjust this based on the total number of questions
+        var percentageScore = (correctAnswers / totalQuestions) * 100;
+
+        return percentageScore.toFixed(2); // Return the score with two decimal places
+    }
+</script>
+
+</body>
+</html>
